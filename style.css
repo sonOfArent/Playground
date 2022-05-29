@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root {
+    --primary-color: #0056cf;
+    --secondary-color: #181a97;
+    --alert-color: #d23d3d;
+    --danger-color: rgb(194, 0, 0);
+
+    --primary-gradient: linear-gradient(#0056cf, #181a97);
+    --secondary-gradient: linear-gradient(#004ab3, #141687);
+    --alert-gradient: linear-gradient(rgb(235, 83, 192), #d23d3d);
+    --danger-gradient: linear-gradient(rgb(255, 0, 0), rgb(194, 0, 0));
+    --success-gradient: linear-gradient(rgb(37, 220, 49), rgb(31, 183, 41));
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+    height: 100%;
+    background-color: rgb(195, 195, 195);
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: white;
+
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .7);
+}
+
+a:hover {
+    color: white;
+    cursor: pointer;
+}
+
+p {
+    text-align: center;
+}
+
+/* Utilities */
+.container {
+    padding: 20px 40px;
+}
+
+.card {
+    width: fit-content;
+    height: fit-content;
+    padding: 30px;
+    background-image: var(--secondary-gradient);
+    border: 1px solid black;
+    box-shadow: 0px 2px 10px black;
+    border-radius: 10px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    align-items: center;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+/* Utility Colors */
+.success-gradient {
+    background-image: var(--success-gradient);
+}
+
+.danger-gradient {
+    background-image: var(--danger-gradient);
+}
+
+.alert-gradient {
+    background-image: var(--alert-gradient);
+}
+
+/* Navbar */
+.navbar {
+    min-height: 4rem;
+    background-image: var(--primary-gradient);
+    box-shadow: 3px 1px 10px 3px black;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .7);
+    
+    
+}
+
+.links {
+    display: flex;
+}
+
+.links a {
+    padding: 10px;
+    margin-right: 5px;
+    transition: all .3s;
+    border-radius: 20px;
+}
+
+.links :hover  {
+    color: white;
+    box-shadow: 1px 1px 7px black;
+}
+
+.navbar .brand a {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Intro */
+.intro {
+    margin-top: 3px;
+    margin-bottom: 10px;
+    background-image: var(--secondary-gradient);
+}
+
+.intro .flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro .flex * {
+    margin-top: 20px;
+}
+
+.intro h2 {
+    border-bottom: 2px solid rgba(255, 255, 255, .7);
+}
+
+/* Homepage Description Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    /* margin-top: 50px; */
+}
+
+.card-grid :nth-of-type(3) {
+    grid-column: 1 / span 3;
+}
+
+.card-grid .card-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.card-grid .card {
+    transition: transform .4s;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.card-grid :nth-of-type(3) {
+    padding: 10px 20%;
+}
+
+.card-grid ion-icon {
+    transition: transform .4s;
+}
+
+.card-grid .card-holder :hover {
+    /* transform: translateY(-20px); */
+    transform: scale(1.1);
+}
