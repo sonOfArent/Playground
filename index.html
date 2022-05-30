@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Development Playground</title>
     <link rel="stylesheet" href="style.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+
 </head>
 <body>
     <!-- Navbar -->
@@ -19,22 +23,27 @@
                 <a href="about.html">About Me</a>
                 <a href="contact.html">Contact Me</a>
             </div>
-            <div class="menu">
-                <a href="#navbar-overflow">
+            <div class="mobile-menu">
+                <input type="checkbox" name="dropdown-checkbox" id="dropdown-checkbox">
+                <label for="dropdown-checkbox">
                     <ion-icon name="menu"></ion-icon>
-                </a>
+                </label>
             </div>
-
         </div>
-        <div class="navbar-overflow">
-            <div class="links-overflow">
+    </section>
+    <!-- I'm thinking of a solution, in which I show a block positioned underneath the navbar with the links on it. An animation can handle making it drop smoothly.
+    
+    Alternatively, I turn the nav link into something akin to a checkbox instead of a link.-->
+
+    <section class="dropdown">
+        <div class="mobile-links-holder">
+            <div class="mobile-links">
                 <a href="projects.html">Projects</a>
                 <a href="about.html">About Me</a>
                 <a href="contact.html">Contact Me</a>
             </div>
         </div>
     </section>
-
     <!-- Intro -->
     <section class="intro">
         <div class="container flex">
@@ -79,7 +88,6 @@
         </div>
     </section>
 
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
