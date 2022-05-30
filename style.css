@@ -129,13 +129,14 @@ p {
     display: none;
 }
 
-.navbar .menu:target .navbar-overflow {
-    max-height: 90px;
-}
-
-.navbar-overflow {
+#navbar-overflow {
     overflow: hidden;
     max-height: 0px;
+}
+
+#navbar-overflow:target {
+    max-height: 200px;
+    margin-bottom: 200px;
 }
 
 .links-overflow {
