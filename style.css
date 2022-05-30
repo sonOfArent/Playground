@@ -27,6 +27,8 @@ html {
     font-size: 20px;
     color: white;
 
+    scroll-behavior: smooth;
+
 }
 
 body {
@@ -132,12 +134,14 @@ p {
 #navbar-overflow {
     overflow: hidden;
     max-height: 0px;
+    margin-top: 10px;
 }
 
 #navbar-overflow:target {
     max-height: 200px;
-    margin-bottom: 200px;
 }
+
+
 
 .links-overflow {
     display: flex;
