@@ -11,6 +11,7 @@
     --secondary-gradient: linear-gradient(#004ab3, #141687);
     --alert-gradient: linear-gradient(rgb(235, 83, 192), #d23d3d);
     --danger-gradient: linear-gradient(rgb(255, 0, 0), rgb(194, 0, 0));
+    --lighter-danger-gradient: linear-gradient(rgb(255, 50, 50), rgb(194, 50, 50));
     --success-gradient: linear-gradient(rgb(37, 220, 49), rgb(31, 183, 41));
 }
 
@@ -58,8 +59,6 @@ p {
 }
 
 .card {
-    width: fit-content;
-    height: fit-content;
     padding: 30px;
     background-image: var(--secondary-gradient);
     border: 1px solid black;
@@ -214,6 +213,7 @@ p {
 
 .intro h2 {
     border-bottom: 2px solid rgba(255, 255, 255, .7);
+    text-align: center;
 }
 
 
@@ -256,6 +256,74 @@ p {
 
 .card-grid .card-holder :hover {
     transform: scale(1.1);
+}
+
+
+/* Form */
+.form {
+    margin: 40px 0px;
+    /* min-height: 500px; */
+    border-top: 2px groove gray;
+    border-bottom: 2px groove gray;
+}
+
+.form ::placeholder {
+    color: rgb(200, 200, 200);
+}
+
+.form .description {
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-intro {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    justify-content: space-between;
+}
+
+
+.form-intro form {
+    background-image: var(--alert-gradient);
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 80%;
+    justify-self: flex-end;
+}
+
+.form-intro input[type="text"],
+.form-intro input[type="email"] {
+    width: 100%;
+    border: 0;
+    color: #fff;
+    border-bottom: 1px solid white;
+    outline: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.form-intro input[type="submit"] {
+    color: rgba(255, 255, 255, .8);
+    background-image: var(--secondary-gradient);
+    padding: 5px 10px;
+    width: fit-content;
+    align-self: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    opacity: 75%;
+    transition: all .2s;
+}
+
+.form-intro input[type="submit"]:hover {
+    background-image: var(--primary-gradient);
+    opacity: 100%;
+    transform: translateY(-2px);
 }
 
 
