@@ -98,7 +98,7 @@ h1 {
 
 .slider-circle {
     margin: 2px;
-    background-color: black;
+    background-color: #202020;
     width: 28px;
     height: 28px;
     border-radius: 50%;
@@ -111,7 +111,7 @@ h1 {
 }
 
 .slider-holder input[type="checkbox"]:checked + label .slider {
-    background-color: black;
+    background-color: #202020;
 }
 
 .slider-holder input[type="checkbox"]:checked + label .slider-circle {
