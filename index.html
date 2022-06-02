@@ -12,6 +12,7 @@
 
 </head>
 <body>
+
     <!-- Navbar -->
     <section class="navbar">
         <div class="container flex flex-center flex-between">
@@ -19,9 +20,9 @@
                 <a href="index.html">WDPlayground</a>
             </div>
             <div class="links">
-                <a href="projects.html">Projects</a>
-                <a href="about.html">About Me</a>
-                <a href="contact.html">Contact Me</a>
+                <a href="projects.html" id="projects-link">Projects</a>
+                <a href="about.html" id="about-link">About Me</a>
+                <a href="contact.html" id="contact-link">Contact Me</a>
             </div>
             <div class="mobile-menu">
                 <input type="checkbox" name="dropdown-checkbox" id="dropdown-checkbox">
@@ -31,10 +32,6 @@
             </div>
         </div>
     </section>
-    <!-- I'm thinking of a solution, in which I show a block positioned underneath the navbar with the links on it. An animation can handle making it drop smoothly.
-    
-    Alternatively, I turn the nav link into something akin to a checkbox instead of a link.-->
-
     <section class="dropdown">
         <div class="mobile-links-holder">
             <div class="mobile-links">
@@ -44,6 +41,7 @@
             </div>
         </div>
     </section>
+
     <!-- Intro -->
     <section class="intro">
         <div class="container flex">
@@ -138,19 +136,23 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card nightMode-card">
                 <h3>Night mode!</h3>
-                <input type="checkbox" name="nightMode" id="nightMode">
-                <span class="slider">
-                    
-                </span>
+                <div class="slider-holder">
+                    <input type="checkbox" name="nightMode" id="nightMode" class="slider-input">
+                    <label for="nightMode">
+                        <div class="slider">
+                            <div class="slider-circle"></div>
+                        </div>
+                    </label>
+                </div>
             </div>
         </div>
     </section>
 
 
 
-
+    
     <!-- Footer -->
     <section class="footer">
         <div class="links-holder">
