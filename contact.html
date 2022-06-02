@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #contact-link {
+            color: white;
+            /* text-shadow: 1px 3px 5px black; */
+        }
+    </style>
+
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+        
+    <!-- Navbar -->
+    <section class="navbar">
+        <div class="container flex flex-center flex-between">
+            <div class="brand">
+                <a href="index.html">WDPlayground</a>
+            </div>
+            <div class="links">
+                <a href="projects.html" id="projects-link">Projects</a>
+                <a href="about.html" id="about-link">About Me</a>
+                <a href="contact.html" id="contact-link">Contact Me</a>
+            </div>
+            <div class="mobile-menu">
+                <input type="checkbox" name="dropdown-checkbox" id="dropdown-checkbox">
+                <label for="dropdown-checkbox">
+                    <ion-icon name="menu"></ion-icon>
+                </label>
+            </div>
+        </div>
+    </section>
+    <section class="dropdown">
+        <div class="mobile-links-holder">
+            <div class="mobile-links">
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About Me</a>
+                <a href="contact.html">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="links-holder">
+            <h3>Links</h3>
+            <div class="links">
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About Me</a>
+                <a href="contact.html">Contact Me</a>
+            </div>
+        </div>
+        <div class="find-me">
+            <h3>Find Me</h3>
+            <div class="social-media">
+                <label for="mail">
+                    <a href="mailto:exodusdonley@gmail.com">
+                        <ion-icon name="mail"></ion-icon>
+                    </a>
+                </label>
+                <label for="git">
+                    <a href="https://www.github.com/SonOfArent">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                </label>
+            </div>
+        </div>
+        <div class="projects">
+            <h3>Projects</h3>
+        </div>
+    </section>
+    
+    <script src="main.js"></script>
+</body>
+</html>
