@@ -10,11 +10,19 @@ const nightModeCard = document.querySelector(".nightMode-card");
 const transparencyRadio = document.querySelector(".features-grid :nth-of-type(1)");
 const transparencyRadioButtons = document.querySelectorAll(".features-radio input[type='radio']");
 
-// About //
-const modals = document.querySelectorAll(".modal");
-const modalsSection = document.querySelector("section.modals");
 
-// I need to have the modals section checking for a click input, checking the event target's parent ID or grandparent's ID (for which modal it is), then have that modal show. I can have the close buttons in a separate listener to do the same thing, effectively.
+// About //
+const experienceAndAccomplishments = document.querySelector("section.experience-and-accomplishments");
+const experienceFlex = document.querySelector(".experience-flex");
+const languages = [];
+const modalsSection = document.querySelector(".modals")
+const modals = document.querySelectorAll(".modal");
+modals.forEach(modal => {
+    let modalLanguage = modal.id.split("Modal");
+    languages.push(modalLanguage[0]);
+});
+
+const modalCloseButtons = document.querySelectorAll(".modal-close");
 
 
 // Event Listeners
@@ -28,35 +36,37 @@ navbar.addEventListener("input", function(event) {
     }
 })
 
-transparencyRadio.addEventListener("input", function() {
-    transparencyRadioButtons.forEach(button => {
-        if (button.checked) {
-            console.log(button.id);
-            if (button.id == "featuresRadio-0") {
-                transparencyRadio.style.opacity = "0";
+if (transparencyRadio) {
+    transparencyRadio.addEventListener("input", function() {
+        transparencyRadioButtons.forEach(button => {
+            if (button.checked) {
+                console.log(button.id);
+                if (button.id == "featuresRadio-0") {
+                    transparencyRadio.style.opacity = "0";
+                }
+                console.log(button.id);
+                if (button.id == "featuresRadio-25") {
+                    transparencyRadio.style.opacity = "25%";
+                }
+                console.log(button.id);
+                if (button.id == "featuresRadio-50") {
+                    transparencyRadio.style.opacity = "50%";
+                }
+                console.log(button.id);
+                if (button.id == "featuresRadio-75") {
+                    transparencyRadio.style.opacity = "75%";
+                }
+                console.log(button.id);
+                if (button.id == "featuresRadio-100") {
+                    transparencyRadio.style.opacity = "100%";
+                }
             }
-            console.log(button.id);
-            if (button.id == "featuresRadio-25") {
-                transparencyRadio.style.opacity = "25%";
-            }
-            console.log(button.id);
-            if (button.id == "featuresRadio-50") {
-                transparencyRadio.style.opacity = "50%";
-            }
-            console.log(button.id);
-            if (button.id == "featuresRadio-75") {
-                transparencyRadio.style.opacity = "75%";
-            }
-            console.log(button.id);
-            if (button.id == "featuresRadio-100") {
-                transparencyRadio.style.opacity = "100%";
-            }
-        }
-    });
-})
+        });
+    })
+}
 
-
-nightModeCard.addEventListener("input", function() {
+if (nightModeCard) {
+    nightModeCard.addEventListener("input", function() {
     if (nightModeToggler.checked) {
         console.log("Night mode toggled.");
 
@@ -72,3 +82,39 @@ nightModeCard.addEventListener("input", function() {
         cardGrid.style.backgroundColor = "antiquewhite"
     }
 })
+}
+if (experienceFlex) {
+    experienceFlex.addEventListener("click", openModal)
+}
+
+
+modalsSection.addEventListener("click", function(event) {
+    let closeButton = event.target.parentElement.parentElement;
+    let toClose = closeButton.parentElement.parentElement;
+    
+    closeButton.classList.forEach(classElement => {
+        if (classElement == "modal-close") {
+            toClose.style.display = "none";
+        }
+    });
+})
+
+
+// Event Listener Functions
+function openModal(event) {
+    // This is for after I've figured it out.
+    let currentModal = (event.target.parentElement);
+
+    if (currentModal.id !== "") {
+
+        let currentModalLanguage = currentModal.id.split("Card");
+
+        let toOpen = document.querySelector(`#${currentModalLanguage[0]}Modal`);
+
+        toOpen.style.display = "block";
+    }
+}
+
+function closeModal(event) {
+
+}
