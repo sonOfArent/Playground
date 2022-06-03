@@ -405,6 +405,7 @@ h1 {
     transition: font-size .3s, border-width .3s;
     font-size: 17px;
     padding: 5px;
+    cursor: pointer;
     
 }
 
@@ -422,11 +423,6 @@ h1 {
     margin-bottom: 30px;
 }
 
-
-/* Note to self: make reusable somehow
-        I thiiink I can get it to be reusable if I create some sort of slider-holder class, where the element has a checkbox in it as well as the slider and slider circle within the slider. Or maybe there's some sort of slider-checkbox class. */
-
-
 .slider-holder input[type="checkbox"]:checked + label .slider {
     background-color: black;
 }
@@ -435,7 +431,6 @@ h1 {
     background-color: white;
     transform: translateX(38px);
 }
-
 
 
 
