@@ -1,6 +1,113 @@
+/* TO MOVE */
+.modal {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, .1);
+    display: none;
+}
+
+.modal-content {
+    color: black;
+    background-color: white;
+    margin: 20% auto;
+    padding: 20px;
+    width: 70%;
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, .2), 0px 7px 20px 0px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-close {
+    align-self: flex-end;
+}
+
+.modal-close button {
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+    background-color: white;
+    color: black;
+    transform: scale(2);
+}
+
+.modal-close button:hover {
+    cursor: pointer;
+    color: grey;
+}
+
 
 /* About */
-.about-grid {
-    display: grid;
-    /* grid-template-columns: repeat(3, 1fr); */
+h3 {
+    border-bottom: 1px solid antiquewhite;
+    margin-bottom: 10px;
+}
+
+h3 + p {
+    font-size: small;
+}
+
+
+.experience-and-accomplishments {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience-and-accomplishments .card {
+    background-image: none;
+}
+
+.experience-and-accomplishments .item {
+    padding: 10px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.experience-and-accomplishments .item:hover {
+    transform: translateY(-3px);
+}
+
+#htmlCard {
+    background-color: orange;
+}
+
+#jsCard {
+    background-color: rgb(206, 206, 0);
+}
+
+#pythonCard {
+    background-image: linear-gradient(to bottom right, yellow, blue);
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.experience-flex {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+    max-width: 200px;
+}
+
+.item ion-icon {
+    transform: scale(2);
+    padding: 10px;
 }

@@ -10,6 +10,14 @@ const nightModeCard = document.querySelector(".nightMode-card");
 const transparencyRadio = document.querySelector(".features-grid :nth-of-type(1)");
 const transparencyRadioButtons = document.querySelectorAll(".features-radio input[type='radio']");
 
+// About //
+const modals = document.querySelectorAll(".modal");
+const modalsSection = document.querySelector("section.modals");
+
+// I need to have the modals section checking for a click input, checking the event target's parent ID or grandparent's ID (for which modal it is), then have that modal show. I can have the close buttons in a separate listener to do the same thing, effectively.
+
+
+// Event Listeners
 navbar.addEventListener("input", function(event) {
     if (dropdownCheckbox.checked) {
         console.log("Toggled visible.")
