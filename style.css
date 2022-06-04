@@ -157,6 +157,7 @@ h1 {
 .navbar .links {
     display: flex;
     align-items: center;
+    margin-left: 20px;
 }
 
 .navbar .links a {
