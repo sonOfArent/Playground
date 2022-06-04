@@ -88,16 +88,18 @@ if (experienceFlex) {
 }
 
 
-modalsSection.addEventListener("click", function(event) {
-    let closeButton = event.target.parentElement.parentElement;
-    let toClose = closeButton.parentElement.parentElement;
+if (modalsSection) {
+    modalsSection.addEventListener("click", function(event) {
+        let closeButton = event.target.parentElement.parentElement;
+        let toClose = closeButton.parentElement.parentElement;
     
-    closeButton.classList.forEach(classElement => {
-        if (classElement == "modal-close") {
-            toClose.style.display = "none";
-        }
-    });
-})
+        closeButton.classList.forEach(classElement => {
+            if (classElement == "modal-close") {
+                toClose.style.display = "none";
+            }
+        });
+    })
+}
 
 
 // Event Listener Functions
@@ -118,3 +120,5 @@ function openModal(event) {
 function closeModal(event) {
 
 }
+
+console.log(body.offsetWidth);

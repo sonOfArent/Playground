@@ -11,6 +11,12 @@
     display: none;
 }
 
+.modal h2 {
+    text-align: center;
+    border-bottom: 2px solid grey;
+    margin-bottom: 10px;
+}
+
 .modal-content {
     color: black;
     background-color: white;
@@ -110,4 +116,14 @@ h3 + p {
 .item ion-icon {
     transform: scale(2);
     padding: 10px;
+}
+
+.accomplishments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accomplishments img {
+    width: 80%;
 }
